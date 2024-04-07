@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="icon" href="ball.png"> 
+    <style>
+        body {
+            text-align: center;
+        }
+        div{
+            display: inline-block;
+            margin: 20px;
+            padding: 10px;
+            border: 10px solid #000000;
+        }
+        h3{
+            color: antiquewhite;
+        }
+        *{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+<body>
+    <div style="background-image: url('campnou.png');">
+        <h1 style="text-align: center; color: antiquewhite;"><b>Personal Football Website</b></h1>
+        <div>
+            <h3><b>My Achievements</b></h3>
+            <a href="achivements.html">
+                <img src= "messi.jpg" alt="Using a picture of messi to depict My Achievements" width = "500" height="330">
+            </a>
+        </div>
+        <div>
+            <h3><b>My Skills</b></h3>
+            <a href="skills.html">
+                <img src= "neymar.jpg" alt="Using a picutre of neymar to depict My Skills" width = "500" height="330">
+            </a>
+        </div>
+        <div>
+            <h3><b>About me</b></h3>
+            <a href="aboutme.html">
+                <img src= "ronaldo.jpg" alt="Using a picture of ronaldo to depict About me" width = "500" height="330">
+            </a>
+        </div>
+        <div>
+            <h3><b>Fav Footballer</b></h3>
+            <a href="fav.html">
+                <img src="ricardokaka.jpg" alt="Using a picture of Ricardo Kaka to depict Fav footballer" width = "375" height="330">
+            </a>
+        </div>
+    </div>
+    <script>
+        function notif() {
+            new Notification("Welcome to my website", {
+                body: "You are now visiting Darshil's personal website",
+                icon: "ball.png"
+            });
+        }
+        notif();
+    </script>
+</body>
+</html>

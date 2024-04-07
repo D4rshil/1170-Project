@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Achievements</title>
+        <link rel="icon" href="ball.png">
+        <style>
+            a:hover{
+                background: #0dba3b;
+            }
+            video{
+                border: 5px solid #000000;
+                padding: 0px;
+            }
+            div > li{
+                list-style-position: inside;
+                background: #d9e000;
+                border: 5px solid #000000;
+                margin: 10px;
+                padding: 10px;
+                width: 33%;
+                text-align: center;
+            }
+            *{
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 style="text-align: center;">Achivements & Goals</h1>
+        <ul>
+            <div>
+                <li><b>Management System-MySQL & Python Project</b></li>
+                <img src="sql.png" height="400px" width="700px" alt="A code snippet of my project">
+                <p>A computer science project I have done in my final year of high school, where we had to use SQL and Python to create a database system.</p>
+            </div>
+
+            <div>
+                <li><b>15k views Youtube Video</b></li>
+                <video controls width="500">
+                    <source src="vid.mp4">
+                </video>
+                <p>It was the first video that hit 15k views on my channel which was my dream goal since the start of my video creation hobby</p>
+                <p><a id="dino" href="https://www.youtube.com/watch?v=BAvx6Cm9Yeg">Link to the video</a></p>
+            </div>
+        </ul>
+
+        <h2>Goals:</h2>
+        <ul>
+            <li>Publish a video on youtube that will get over 100,000 views</li>
+            <li>Publish a fully working database website</li>
+            <li>Publish my very own video game</li>
+        </ul>
+    </body>
+    <script>
+        const dinovid = document.getElementById("dino");
+        dinovid.addEventListener("click", function() { 
+            alert("You are now watching the video"); 
+        });
+    </script>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=], initial-scale=1.0">
+        <title>About me</title>
+        <link rel="icon" href="ball.png"> 
+        <style>
+            body{
+                background-color: white;
+                color: black;
+            }
+            .darkmde{
+                background-color: black;
+                color: white;
+            }
+            .football{
+                background-color: #A88E19;
+                color: #024CD6;
+            }
+            iframe{
+                border: 5px solid #002fff;
+            }
+            *{
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+            button{
+                display: flex;
+                align-items: start;
+                float: right;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 style="text-align: center;">About me</h1>
+        <button onclick="darkmode()">Dark mode</button>
+        <button onclick="fbtheme()">Website theme</button>
+        <p>I am Darshil, studying my 1st year at Dalhousie University. This is a personal website that is football themed.<br> It includes my skills, achievements and goals. This website is an output to express my creativity and developement skills.</p>
+        <p>I aspire to be a Data Analyst or Software programmer, due to my intrest in computer programming and video games.</p>
+        <p>Some of my hobbies include football. It has been a big part of my childhood and brings me a lot of joy.</p>
+        <p>Another hobby of mine is photography, as it helps me potray my creative thinking and capture moments of<br>life that have a lot of meaning to me, sometimes for simple appreciation to the simple things in life. </p>
+        
+        <p>The following video shows the beauty of football also known as Joga Bonito. For many football is an emotion, it has shaped so many lives and futures.</p>    
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/A-r9sj7zHJ4?si=-apPDSEC6_WTYUU3" title="Football Video" allowfullscreen></iframe>
+
+    </body>
+    <script>
+        function darkmode(){
+            var element = document.body;
+            element.classList.toggle("darkmde");
+        }
+
+        function fbtheme(){
+            var element = document.body;
+            element.classList.toggle("football");
+        }
+    </script>
+</html>

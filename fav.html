@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fav Footballer</title>
+        <link rel="icon" href="ball.png">
+
+        <style>
+        h1 {
+            text-align: center;
+        }
+        body{
+            display: inline-block;
+            margin: 20px;
+            padding: 50px;
+            border: 10px solid #000000;
+        }
+        *{
+            background-color: #000000;
+            color: aliceblue;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+        }
+        input {
+            height: 30px;
+            border: 4px solid yellow;
+        }
+        textarea {
+            width: 100%;
+            padding: 5px;
+        }
+        button{
+            background-color: gold;
+            color: black;
+            height: 30px;
+            width: 70px;
+        }
+        </style>
+    </head>
+    <body>
+        <h1>Who is your favorite Footballer?</h1>
+        <form id="ballin">
+            <label>Name of the player: </label>
+            <input type="text" name="name">
+
+            <label>His shirt number: </label>
+            <input type="number" name="num">
+
+            <label>What club does he play for?</label>
+            <input type="text" name="club">
+
+            <label>Is he still playing?</label>
+            <label>          
+                <input type="radio" id="ryes" name="ques" value="ryes">
+                Yes, he is still playing
+            </label>
+
+            <label>
+                <input type="radio" id="rno" name="ques" value="rno">
+                No, he has retired :[
+            </label>
+
+            <label>Why do you like him?</label>
+            <textarea name="reason"></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+
+    <script>
+        document.getElementById("ballin").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            let name = document.getElementsByName("name")[0].value;
+            let age = document.getElementsByName("num")[0].value;
+            let club = document.getElementsByName("club")[0].value;
+            let isPlaying = document.querySelector("input[name='ques']:checked");
+            let reason = document.getElementsByName("reason")[0].value;
+
+            if (name.trim() === "") {
+                alert('Enter the name of any player you like');
+                return;
+            }
+            if (isNaN(num) || num <= 0) {
+                alert('Unfortunately no shirt number is below 0');
+                return;
+            }
+            if (club.trim() === "") {
+                alert('Please enter the club name');
+                return;
+            }
+            if (!isPlaying) {
+                alert('Please choose an option');
+                return;
+            }
+            if (reason.trim() === "") {
+                alert('Tell us why you like him');
+                return;
+            }
+
+            alert('Form submitted successfully');
+        });
+    </script>
+</html>
